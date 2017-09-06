@@ -8,7 +8,7 @@ object TransformerManager {
 
 class TransformerManager(managerID:String) extends Actor with ActorLogging {
 
-  val adbsTransformer = context.actorOf(ADSBTransformer.props("adbsTransformer"))
+  val adbsTransformer = context.actorOf(AirplaneTransformer.props("adbsTransformer"))
 
   override def preStart(): Unit = log.info("Transformer manager : " + managerID + " started.")
   override def postStop(): Unit = log.info("Transformer manager : " + managerID + " stopped.")
