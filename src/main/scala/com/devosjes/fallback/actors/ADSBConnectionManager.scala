@@ -27,7 +27,7 @@ class AirplaneTransformer(transformerId:String) extends Actor with ActorLogging 
 
   final implicit val materializer: ActorMaterializer = ActorMaterializer(ActorMaterializerSettings(context.system))
   val http = Http(context.system)
-  val url="https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=33.433638&lng=-112.008113&fDstL=0&fDstU=100"
+  val url="https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=52.3105386&lng=4.7682744&fDstL=0&fDstU=100"
 
   override def preStart(): Unit = {
 
